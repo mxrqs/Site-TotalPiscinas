@@ -91,7 +91,6 @@ img { max-width: 100%; display: block; }
 /* Logo mais equilibrada */
 .logo img {
   height: 125px;
-  transition: transform 0.3s ease;
 }
 
 .logo img:hover { 
@@ -139,10 +138,11 @@ img { max-width: 100%; display: block; }
 .header__actions {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 18px; 
+  margin-right: 50px;
 }
 
-/* Botão ainda mais premium */
+
 .header .btn-primary {
   padding: 12px 24px;
   border-radius: 14px;
@@ -569,81 +569,104 @@ img { max-width: 100%; display: block; }
   filter: brightness(1.1);
 }
 
-/* =========================================
-   MOBILE ULTRA AJUSTADO (até 768px)
-========================================= */
+/* =========================
+   MOBILE
+========================= */
+
+.mobile-text {
+  display: none;
+}
+
+/* MOBILE MENU */
+#burger {
+  display: none;
+}
+
 @media (max-width: 768px) {
 
-  /* ===== CONTAINER ===== */
-  .container {
-    padding: 0 18px;
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    gap: 18px;
   }
 
-  /* ===== HEADER ===== */
+  .nav.nav--open {
+    display: flex;
+  }
+
+  #burger {
+    display: block;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+}
+
+  /* ===== Ajuste Header ===== */
+  .topbar {
+    font-size: 12px;
+    padding: 6px 0;
+  }
+
+  .social-instagram i {
+  font-size: 20px;
+}
+
   .header__inner {
-    padding: 10px 0;
+    padding: 8px 0;
   }
 
   .logo img {
-    height: 60px;
+    height: 65px;
   }
 
- /* ===== Diminuir botão do topo ===== */
-  .header .btn-primary {
-    padding: 7px 10px;
-    font-size: 10px;
-    border-radius: 10px;
+  .header .btn--yellow {
+    padding: 6px 10px;
+    font-size: 12px;
   }
 
-  /* ===== HERO ===== */
+  /* ===== Hero ===== */
   .hero {
     min-height: 75vh;
   }
 
   .hero__content {
-    padding: 90px 0 60px;
+    padding: 70px 0 90px 0;
     text-align: center;
-    margin: 0 auto;
   }
 
   .hero__title {
-    font-size: 30px;
-    line-height: 1.2;
+    font-size: 28px;
   }
 
   .hero__text {
     font-size: 15px;
-    margin-bottom: 25px;
   }
 
   .hero__actions {
     flex-direction: column;
     align-items: center;
-    gap: 14px;
-    margin-top: 25px;
   }
 
   .hero__actions .btn {
-    width: 90%;
-    max-width: 300px;
+    width: 85%;
+    max-width: 280px;
   }
 
-  /* Ajuste da wave */
-   .hero__wave {
-    height: 50px;
-    clip-path: polygon(
-      0 60%,
-      20% 75%,
-      40% 65%,
-      60% 80%,
-      80% 70%,
-      100% 80%,
-      100% 100%,
-      0 100%
-    );
+  /* ===== ONDA ===== */
+  .hero__wave {
+    height: 60px;
+    clip-path: ellipse(90% 100% at 50% 100%);
   }
-
-}
 
   /* ===== SEÇÕES ===== */
   .section {
@@ -704,3 +727,5 @@ img { max-width: 100%; display: block; }
   .footer__grid {
     gap: 25px;
   }
+
+
