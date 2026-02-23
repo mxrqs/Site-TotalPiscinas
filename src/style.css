@@ -609,8 +609,6 @@ img { max-width: 100%; display: block; }
     cursor: pointer;
   }
 
-}
-
   /* ===== Ajuste Header ===== */
   .topbar {
     font-size: 12px;
@@ -626,12 +624,12 @@ img { max-width: 100%; display: block; }
   }
 
   .logo img {
-    height: 65px;
+    height: 70px;
   }
 
   .header .btn--yellow {
-    padding: 6px 10px;
-    font-size: 12px;
+    padding: 6px 8px;
+    font-size: 10px;
   }
 
   /* ===== Hero ===== */
@@ -663,10 +661,10 @@ img { max-width: 100%; display: block; }
   }
 
   /* ===== ONDA ===== */
-  .hero__wave {
-    height: 60px;
-    clip-path: ellipse(90% 100% at 50% 100%);
-  }
+ .hero__wave {
+  height: 22px;
+  clip-path: ellipse(70% 100% at 50% 100%);
+}
 
   /* ===== SEÇÕES ===== */
   .section {
@@ -727,5 +725,4 @@ img { max-width: 100%; display: block; }
   .footer__grid {
     gap: 25px;
   }
-
-
+}
